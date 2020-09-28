@@ -6,5 +6,5 @@ steps:
     entrypoint: mvn
     args: [ 'package','-Dmaven.test.skip=true' ]
   - name: gcr.io/cloud-builders/docker
-    args: [ 'build', '-t', 'gcr.io/earth-bnb-server-290917/brianImagename', '--build-arg=JAR_FILE=target/build-artifact', '.' ]
+    -args: [ 'build', '-t', 'gcr.io/earth-bnb-server-290917/brianImagename', '--build-arg=JAR_FILE=target/earthbb-1.0.0.jar', '.' ]
   images: [ 'gcr.io/earth-bnb-server-290917/brianImagename' ]
